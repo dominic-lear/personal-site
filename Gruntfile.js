@@ -31,6 +31,8 @@ module.exports = function(grunt) {
 					'templates/*/*/*.hbs', 
 					'assets/less/*.less',
 					'assets/less/*/*.less',
+					'assets/js/*.js',
+					'assets/js/plugins/*.js',
 					'models/*.json'
 				],
 				tasks: [
@@ -74,6 +76,13 @@ module.exports = function(grunt) {
 						expand: true, 
 						src: ['assets/js/*'], 
 						dest: 'dist/assets/js/', 
+						filter: 'isFile',
+						flatten: true
+					},
+					{
+						expand: true, 
+						src: ['assets/js/plugins/*'], 
+						dest: 'dist/assets/js/plugins/', 
 						filter: 'isFile',
 						flatten: true
 					},
