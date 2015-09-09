@@ -37,7 +37,8 @@ module.exports = function(grunt) {
 				],
 				tasks: [
 					'assemble:all',
-					'less'
+					'less',
+					'copy:main'
 				],
 				options: {
 					livereload: true,
@@ -125,6 +126,6 @@ module.exports = function(grunt) {
 
 
 	// Tasks available
-	grunt.registerTask('default', ['less:main','assemble:all','connect','watch:all']); // Watch less & html
+	grunt.registerTask('default', ['less:main', 'copy:main', 'assemble:all','connect','watch:all']); // Watch less & html
 
 };
