@@ -124,7 +124,6 @@ module.exports = function(grunt) {
 	// for compiling less to css
 	grunt.loadNpmTasks('grunt-contrib-less');
 
-
 	// Tasks available
 	grunt.registerTask('default', ['less:main', 'copy:main', 'assemble:all','connect','watch:all']); // Watch less & html
 
