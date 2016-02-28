@@ -14,7 +14,7 @@
 
 	<!-- FONT
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600,800" rel="stylesheet" type="text/css">
 
 	<!-- CSS
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -24,16 +24,21 @@
 <body class="{{ bodyClass }}">
 
 	{{> header}}
+
 	<!-- Primary Page Layout
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<div class="container">
-		<div class="row">
-			<div class="one-half column" style="margin-top: 25%">
-				{{#block "content"}}{{/block}}
-			</div>
-		</div>
-	</div>
+	<main class="main">
+		{{#block "main"}}{{/block}}
+	</main>
+
+	<article class="content">
+		{{#block "nav"}}{{/block}}
+		{{#block "content"}}{{/block}}
+	</article>
+
 	{{> footer}}
+
+	<script type="text/javascript" src="/assets/js/app.js"></script>
 
 <!-- End Document
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->

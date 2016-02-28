@@ -1,0 +1,103 @@
+// http://codepen.io/LukyVj/pen/yNwgrK
+
+@main-size: 16px;
+
+// Material tabs
+.material-tabs {
+  display: block;
+  float: left;
+  padding: @main-size;
+  padding-top: 0;
+  width: 100%;
+
+  @media all and (max-width: 480px) {
+    max-width: 100%;
+    left: 0;
+  }
+}
+
+.visible {
+  position: relative;
+  opacity: 1;
+  width: 100% ;
+  height: auto;
+  float: left;
+  transition: opacity .35s ease;
+  z-index: 3;
+}
+.hidden {
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0s ease;
+  img {
+    display: none;
+  }
+}
+
+[class*="tabbed-section-"] {
+  float: left; 
+  //color: #000;  
+}
+
+
+.tabbed-section__selector {
+  position: relative;
+  height: @main-size*2;
+  top: -@main-size*1.95;
+  left: -@main-size;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  float: left;
+
+  [class*="-tab-"] {
+    float: left;
+    display: block;
+    height: @main-size*2;
+    line-height: @main-size*2;
+    width: 100px;
+    text-align: center;
+    background: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+
+
+    &.active {
+      color: @blue;
+    }
+  }
+
+}
+
+.tabbed-section__highlighter {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  height: 2px;
+  background: @blue;
+  max-width: 100px;
+  width: 100%;
+  transform: translateX(0);
+  display: block;
+  left: 0;
+  transition: transform .23s ease ;
+}
+
+.tabbed-section__selector-tab-5.active ~ .tabbed-section__highlighter {
+  transform: translateX(400px);
+}
+.tabbed-section__selector-tab-4.active ~ .tabbed-section__highlighter {
+  transform: translateX(300px);
+}
+.tabbed-section__selector-tab-3.active ~ .tabbed-section__highlighter {
+  transform: translateX(200px);
+}
+.tabbed-section__selector-tab-2.active ~ .tabbed-section__highlighter {
+  transform: translateX(100px);
+}
+.tabbed-section__selector-tab-1.active ~ .tabbed-section__highlighter {
+  transform: translateX(0);
+}
