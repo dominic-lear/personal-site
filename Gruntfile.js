@@ -69,6 +69,14 @@ module.exports = function(grunt) {
 			}
 		},
 
+		cssmin: {
+            target: {
+                files: {
+                    "dist/assets/css/main.min.css": "dist/assets/css/main.css"
+                }
+            }
+        },
+
 		copy: {
 			main: {
 				files: [
@@ -124,7 +132,9 @@ module.exports = function(grunt) {
 	// for compiling less to css
 	grunt.loadNpmTasks('grunt-contrib-less');
 
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+
 	// Tasks available
-	grunt.registerTask('default', ['less:main', 'copy:main', 'assemble:all','connect','watch:all']); // Watch less & html
+	grunt.registerTask('default', ['less:main', 'cssmin', 'copy:main', 'assemble:all','connect','watch:all']); // Watch less & html
 
 };

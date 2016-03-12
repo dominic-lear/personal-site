@@ -1,5 +1,8 @@
 # RateMyPlacement Email Templates
-Rebuild of rate templates to using handlebars.js and assemble.io
+- fallback for css calc
+- sticky tabs
+- rewrite js for tabs
+- copy updates
+- rewrite css for tabs
+- media q bgs duck
 
-## todo
-- try grunt newer again
