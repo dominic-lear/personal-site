@@ -1,8 +1,16 @@
+// http://ianlunn.github.io/Hover/
+
 html,
 body {
 	padding: 0;
 	margin: 0;
 	height: 100%;
+}
+
+body {
+	overflow-y: hidden;
+	color: #444;
+    background: #F9F9F9;
 }
 
 .main,
@@ -13,9 +21,10 @@ body {
 }
 
 .main {
-	background: @blue;
+	background: #1560FA url(../../assets/img/ducks.jpg);
 	color: #FFF;
 	text-align: center;
+	background-position: right -150px top;
 
 	.hey {
 		padding: 40px;
@@ -61,7 +70,14 @@ body {
 			border-radius: 5px; 
 			text-decoration: none;
 		}
+	}
 
+	.ducks {
+		width: 50%;
+		position: absolute;
+		bottom: 10px;		
+		left: 0;
+		color: #4B97E6;
 	}
 }
 

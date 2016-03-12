@@ -24,8 +24,7 @@ var tabs = [
   '.tabbed-section__selector-tab-1',
   '.tabbed-section__selector-tab-2',
   '.tabbed-section__selector-tab-3',
-  '.tabbed-section__selector-tab-4',
-  '.tabbed-section__selector-tab-5'
+  '.tabbed-section__selector-tab-4'
 ];
 
 // Create the toggle function
@@ -42,30 +41,25 @@ var toggleTab = function(element) {
     this.parentNode.childNodes[3].classList.remove('active');
     this.parentNode.childNodes[5].classList.remove('active');
     this.parentNode.childNodes[7].classList.remove('active');
-    this.parentNode.childNodes[9].classList.remove('active');
 
     // Then, give `this` (the clicked tab), the active class
     this.classList.add('active');
     
     // Check if the clicked tab contains the class of the 1 or 2
     if(this.classList.contains('tabbed-section__selector-tab-1')) {
-      toggleClass(1, [2,3,4,5]);
+      toggleClass(1, [2,3,4]);
     }
 
     if(this.classList.contains('tabbed-section__selector-tab-2')) {
-    	toggleClass(2, [1,3,4,5]);
+    	toggleClass(2, [1,3,4]);
     }
     
     if(this.classList.contains('tabbed-section__selector-tab-3')) {
-    	toggleClass(3, [1,2,4,5]);
+    	toggleClass(3, [1,2,4]);
     }
 
     if(this.classList.contains('tabbed-section__selector-tab-4')) {
-    	toggleClass(4, [1,2,3,5]);
-    }
-
-    if(this.classList.contains('tabbed-section__selector-tab-5')) {
-    	toggleClass(5, [1,2,3,4]);
+    	toggleClass(4, [1,2,3]);
     }
 
   });

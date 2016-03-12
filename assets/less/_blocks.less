@@ -1,3 +1,12 @@
+.section--title {
+	display: none;
+//    margin-left: 100px;
+//    margin-bottom: 0px;
+//    font-size: 21px;
+//    font-weight: 600;
+//    color: #C7C6C6;
+}
+
 .block {
 	width: 100%;
 	overflow: auto;
@@ -25,11 +34,41 @@
 			margin-bottom: 5px;
 			font-weight: 600;
 		}
+		h5 {
+			font-size: 16px;
+			margin-bottom: 5px;
+			font-weight: 600;
+		}		
+	}
 
-		ul {
-			list-style-position: outside;
-			padding-left: 18px;
-			list-style-type: disc;
+	.block--list {
+		list-style-position: outside;
+		padding-left: 18px;
+		list-style-type: disc;
+	}
+
+	.block--awards {
+		list-style-type: none;
+		.block--award {
+			&:before {
+				content: '\2605';
+				margin-right: 5px;
+			}
+		}
+		.block--award-date {
+			font-style: italic;
+		}
+	}
+
+	&.block--full {
+		.block--title {
+			float: none;
+			width: 100%;
+			color: @blue;
+			font-size: 18px;
+			margin-bottom: 5px;
+			font-weight: 600;
+			text-transform: none;
 		}
 	}
 }
