@@ -22,6 +22,7 @@ function tabatron2000() {
 	];	
 
 	function init () {
+		console.log($('.tab-link')[0]);
 		for (var i = 0; i < tabs.length; i++) {
 			toggleTab(tabs[i]);
 		}
@@ -29,9 +30,7 @@ function tabatron2000() {
 
 	// Create the toggle function
 	var toggleTab = function(element) {
-		//var parent = element.parentNode;
-		
-		// Do things on click
+		// Click handler for tab links
 		$(element)[0].addEventListener('click', function(e){
 
 			// Stop default anchor behaviour with #links
@@ -39,7 +38,7 @@ function tabatron2000() {
 
 			// Set the click tab link as active
 			toggleTabLink();
-			this.classList.add('active');
+			this.classList.add('tab-link--active');
 
 			// Set the tab content as active
 			var tabId = this.getAttribute('data-tab-id');
@@ -52,7 +51,7 @@ function tabatron2000() {
 	function toggleTabLink() {
 		var tabSelectors = $('.tab-link');
 		for (var i = 0; i < tabSelectors.length; i++) {
-			tabSelectors[i].classList.remove('active');
+			tabSelectors[i].classList.remove('tab-link--active');
 		}
 	}
 
@@ -68,11 +67,11 @@ function tabatron2000() {
 
 			// If it matches the active tab id from the link show it if not hide it
 			if (tabId == activeTab) {
-				tabs[i].classList.remove('hidden');
-				tabs[i].classList.add('visible');
+				tabs[i].classList.remove('tab-content--hidden');
+				tabs[i].classList.add('tab-content--visible');
 			} else {
-				tabs[i].classList.remove('visible');
-				tabs[i].classList.add('hidden');
+				tabs[i].classList.remove('tab-content--visible');
+				tabs[i].classList.add('tab-content--hidden');
 			}
 		}
 
