@@ -4,5 +4,6 @@
 - rewrite js for tabs
 - copy updates
 - rewrite css for tabs
-- media q bgs duck
+- JSON LD Schema for person
+
 
