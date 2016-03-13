@@ -13,25 +13,18 @@ function tabatron2000() {
 		return document.querySelectorAll(selector);
 	};
 
-	// Define tabs
-	var tabs = [
-		'.tabbed-section__selector-tab-1',
-		'.tabbed-section__selector-tab-2',
-		'.tabbed-section__selector-tab-3',
-		'.tabbed-section__selector-tab-4'
-	];	
-
+	// Kick things off 
 	function init () {
-		console.log($('.tab-link')[0]);
-		for (var i = 0; i < tabs.length; i++) {
-			toggleTab(tabs[i]);
+		var tabSelectors = $('.tab-link');
+		for (var i = 0; i < tabSelectors.length; i++) {
+			toggleTab(tabSelectors[i]);
 		}
 	}
 
 	// Create the toggle function
 	var toggleTab = function(element) {
 		// Click handler for tab links
-		$(element)[0].addEventListener('click', function(e){
+		element.addEventListener('click', function(e){
 
 			// Stop default anchor behaviour with #links
 			e.preventDefault();
