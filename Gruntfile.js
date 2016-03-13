@@ -12,7 +12,6 @@ module.exports = function(grunt) {
 				flatten: true,
 				assets: 'assets',
 				partials: ['templates/partials/*.hbs', 'templates/layouts/*.hbs'],
-				data: ['models/*.json']
 			},
 
 			// Build all pages into html
@@ -32,8 +31,7 @@ module.exports = function(grunt) {
 					'assets/less/*.less',
 					'assets/less/*/*.less',
 					'assets/js/*.js',
-					'assets/js/plugins/*.js',
-					'models/*.json'
+					'assets/js/plugins/*.js'
 				],
 				tasks: [
 					'assemble:all',
@@ -70,12 +68,12 @@ module.exports = function(grunt) {
 		},
 
 		cssmin: {
-            target: {
-                files: {
-                    "dist/assets/css/main.min.css": "dist/assets/css/main.css"
-                }
-            }
-        },
+			target: {
+				files: {
+					"dist/assets/css/main.min.css": "dist/assets/css/main.css"
+				}
+			}
+		},
 
 		copy: {
 			main: {
@@ -124,10 +122,8 @@ module.exports = function(grunt) {
 	// connect for running local server
 	grunt.loadNpmTasks('grunt-contrib-connect');
 
+	// Copy task
 	grunt.loadNpmTasks('grunt-contrib-copy');
-
-	// only compile newer files
-	grunt.loadNpmTasks('grunt-newer');
 
 	// for compiling less to css
 	grunt.loadNpmTasks('grunt-contrib-less');
