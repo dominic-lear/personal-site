@@ -104,8 +104,8 @@ module.exports = function(grunt) {
 					},
 					{
 						expand: true, 
-						src: ['data/*'], 
-						dest: 'dist/data/', 
+						src: ['assets/img/favicons/*'], 
+						dest: 'dist/assets/img/favicons/', 
 						filter: 'isFile',
 						flatten: true
 					}
