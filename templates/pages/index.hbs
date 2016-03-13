@@ -7,54 +7,40 @@ description: I'm Dom and for the past 7 years I've been helping companies to imp
 
 {{#extend "base"}}
 
-{{#content "main"}}
+	{{#content "main"}}
 
-	<section class="hey">
-		<img src="/assets/img/dom.jpg"> 
-		<h3>Hey</h3>
-		<h1>I'm Dom. Technical Programme Manager <span>at</span> <a href="http://rmpenterprise.co.uk">RMP Enterprise</a></h1>
-		<a href="https://www.linkedin.com/in/dominiclear" class="button ghost hvr-sweep-to-right">Contact me on LinkedIn</a>
-	</section>
+		<section class="hey">
+			<img src="/assets/img/dom.jpg"> 
+			<h3>Hey</h3>
+			<h1>I'm Dom. Technical Programme Manager <span>at</span> <a href="http://rmpenterprise.co.uk">RMP Enterprise</a></h1>
+			<a href="https://www.linkedin.com/in/dominiclear" class="button ghost hvr-sweep-to-right">Contact me on LinkedIn</a>
+		</section>		
 
-	<a href="#ducks" class=ducks>Why a duck?</a>
+	{{/content}}
+ 
+	{{#content "content"}}
 
-{{/content}}
+	<div class="tab-container">
+		<div class="tab-nav-overflow">
+			<nav class="tab-nav">
+				<a class="tab-link tab-link--active" href="#overview" data-tab-id="1">Overview</a>
+				<a class="tab-link" href="#projects" data-tab-id="2">Projects</a>
+				<a class="tab-link" href="#experience" data-tab-id="3">Experience</a>
+				<a class="tab-link" href="#skills" data-tab-id="4">Skills</a>
+				<span class="tab-link--highlighter"></span>
+			</nav>
+		</div>
+			
+		{{> overview }}
 
-{{#content "ducks"}}
-Ducks have three eyelids!
-Ducks normally migrate between 200 and 4,000 feet in the air, but are capable of reaching far greater heights. A jet plane over Nevada once struck a Mallard at an altitude of 21,000 feet! This is currently the highest recorded flight of any duck!
-There are around 40 breeds of domestic ducks, with the most popular being the White Pekin.
-A Red-Breasted Merganser was once recorded flying at just over 100 miles per hour, whilst being pursued by a plane.
-It is a myth that a duck's quack won't echo.
-{{/content}}
+		{{> projects }}
+		
+		{{> experience }}
 
-{{#content "content"}}
+		{{> skills }}
 
-<div class="tab-container">
-	<div class="tab-nav-overflow">
-		<nav class="tab-nav">
-			<a class="tab-link tab-link--active" href="#overview" data-tab-id="1">Overview</a>
-			<a class="tab-link" href="#projects" data-tab-id="2">Projects</a>
-			<a class="tab-link" href="#experience" data-tab-id="3">Experience</a>
-			<a class="tab-link" href="#skills" data-tab-id="4">Skills</a>
-			<span class="tab-link--highlighter"></span>
-		</nav>
-	</div>	
-	{{> overview }}
+	</div>
 
-	{{> projects }}
-	
-	{{> experience }}
-
-	{{> skills }}
-
-</div>
-
-{{/content}}
-
-{{#content "nav"}}
-
-{{/content}}
-
+	{{/content}}
 
 {{/extend}}
