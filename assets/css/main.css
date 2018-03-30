@@ -934,3 +934,7 @@ body {
 .no-csscalc .block .block--title br {
   display: none;
 }
+
+html, body, main.main {
+  height: 100%;
+}
