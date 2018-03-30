@@ -512,9 +512,13 @@ body {
   height: 100%;
 }
 body {
-  overflow-y: hidden;
   color: #444;
-  background: #F9F9F9;
+  background: #1560FA url(../../assets/img/ducks-v1.jpg);
+  color: #FFF;
+  text-align: center;
+  background-position: right top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .main,
 .content {
@@ -530,11 +534,6 @@ body {
   background-size: cover;
 }
 .main .hey {
-  padding: 40px;
-  position: absolute;
-  top: 50%;
-  width: 50%;
-  transform: translate(0, -50%);
 }
 .main .ducks {
   display: none;
@@ -937,4 +936,14 @@ body {
 
 html, body, main.main {
   height: 100%;
+}
+
+.main, .content {
+  width: 100%!important;
+}
+
+.main .hey {
+    padding: 40px;
+    width: 50%;
+    margin: 0 auto;
 }
